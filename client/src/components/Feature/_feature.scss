@@ -1,0 +1,38 @@
+.feature {
+  &__top__4box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-radius: 5px;
+    transform: translateY(-70px);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    > div {
+      padding: 40px 20px;
+      background-color: white;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transform: scale(1.05);
+      }
+
+      &:nth-of-type(2) {
+        background-color: purple;
+        > p {
+          color: white;
+        }
+        > h2 {
+          color: white;
+        }
+      }
+      > p {
+        color: #7a7a7a;
+      }
+      > h2 {
+        margin-bottom: 10px;
+        font-size: 28px;
+        font-style: italic;
+      }
+    }
+  }
+}

@@ -25,7 +25,7 @@ const Nav = () => {
     <nav className={top ? "nav " : "nav white__bg "}>
       <div className="hero-container">
         <div className="nav__left">
-          <a href="/">{top ? <h2>Quizzie</h2> : <h2>SkyLink Creative</h2>}</a>
+          <a href="/">{<h2>Quizzie</h2>}</a>
         </div>
         {/* nav menu for desktop */}
         <div className="nav__right " ref={navLinkRef}>
