@@ -14,7 +14,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use("api/users/", userRouter);
+app.use("/api/users", userRouter);
 
 app.get("/", (req, res) => {
   res.json({
@@ -26,7 +26,14 @@ const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`server is running on ${PORT}`);
   //database connection
-  mongoose.connect(`${process.env.DATABASE__CONNECTION}`, () => {
-    console.log("database connect");
-  });
+  mongoose.connect(
+    `${process.env.DATABASE__CONNECTION}`,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    },
+    () => {
+      console.log("database connect");
+    }
+  );
 });
